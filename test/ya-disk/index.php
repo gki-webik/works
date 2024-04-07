@@ -6,7 +6,7 @@
 
 class Backup
 {
-    protected $token = 'y0_AgAAAABw9VyCAAuGVAAAAAEAGCQUAABRvfVHAEdK74McI_QHoRgGMr_RWQ';
+    protected $token = '';
     protected $basicApiUrl = 'https://cloud-api.yandex.net/v1/disk/';
 
     /**
