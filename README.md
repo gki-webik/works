@@ -11,6 +11,8 @@
 /react-one - Мини соц. сеть с курса
 <br>
 /react-php - Связь Ract с PHP
+<br>
+/react-php2 - Связь Ract с PHP
 <hr>
 /tests - Тесты
 <br>
