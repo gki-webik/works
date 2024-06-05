@@ -1,0 +1,42 @@
+body {
+ background-color: #19191d;
+ color: #ddd;
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+ padding: 0;
+}
+.none {
+ display: none;
+}
+h1 {
+ text-align: center;
+ margin: 100px 0 50px 0;
+}
+.block_img_logo {
+ text-align: center;
+}
+.block_img_logo img {
+ width: 250px;
+}
+h3 {
+ margin: 15px;
+ text-align: center;
+ margin-top: 50px;
+}
+h3 a {
+ text-decoration: none;
+ color: lightblue;
+}
+h4 {
+ margin-left: 50px;
+}
+h4 a {
+ text-decoration: underline;
+ color: lightblue;
+}
+@media screen and (width <= 500px) {
+ h4 {
+  text-align: center;
+  margin-top: 50px;
+ }
+}
