@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .output {
+            background-color: #ddd;
+            text-align: center;
+            margin: 10px 0;
+            padding: 20px 50px;
+        }
+    </style>
+    <div class="output"></div>
+    <input type="number" id="oneInput" placeholder="Первое число">
+    <input type="number" id="twoInput" placeholder="Второе число">
+    <input type="text" id="operator" placeholder="Оператор">
+    <button onclick="calculate()">Рассчитать</button>
+    <script>
+        let oneInput = document.getElementById("oneInput");
+        let twoInput = document.getElementById("twoInput");
+        let operator = document.getElementById("operator");
+        function calculate() {
+            let result;
+            switch (operator.value) {
+                case '+':
+                    result = parseFloat(oneInput.value) + parseFloat(twoInput.value);
+                    break;
+                case '-':
+                    result = parseFloat(oneInput.value) - parseFloat(twoInput.value);
+                    break;
+                case '*':
+                    result = parseFloat(oneInput.value) * parseFloat(twoInput.value);
+                    break;
+                case '/':
+                    if (twoInput.value != '0') {
+                        result = parseFloat(oneInput.value) / parseFloat(twoInput.value);
+                    } else {
+                        result = 'Ошибка: Деление на ноль!';
+                    }
+                    break;
+                default:
+                    result = 'Ошибка: Неверный оператор!';
+            }
+            document.querySelector(".output").textContent = 'Вывод: ' + result;
+        }
+    </script>
+
+</body>
+
+</html>

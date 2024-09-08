@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .filter {
+            filter: grayscale(100%);
+        }
+    </style>
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/169124345.jpg?k=d4cfda0944783ff4dbcf081725203598e8e54871b44e057c569712795acffdd5&o=&hp=1"
+        alt="">
+    <button class="btnFilter">Применить фильтр</button>
+    <script>
+        const image = document.querySelector('img');
+        const btnFilter = document.querySelector('.btnFilter');
+        btnFilter.addEventListener('click', () => {
+            image.classList.toggle("filter");
+            btnFilter.textContent == "Применить фильтр" ? btnFilter.textContent == "Убрать фильтр" : btnFilter.textContent == "Применить фильтр";
+        });
+    </script>
+</body>
+
+</html>

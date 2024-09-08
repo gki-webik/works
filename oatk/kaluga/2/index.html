@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .ranges {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 300px;
+        }
+
+        .outputColor {
+            color: black;
+            padding: 10px;
+        }
+
+        .outputBackground {
+            padding: 20px 50px;
+        }
+    </style>
+    <div class="ranges">
+        <div class="outputColor"></div>
+        <div class="outputBackground"></div>
+        <input type="range" step="1" min="0" max="255" value="0" id="oneRange">
+        <input type="range" step="1" min="0" max="255" value="0" id="twoRange">
+        <input type="range" step="1" min="0" max="255" value="0" id="threeRange">
+    </div>
+    <script>
+        const oneRange = document.getElementById('oneRange');
+        const twoRange = document.getElementById('twoRange');
+        const threeRange = document.getElementById('threeRange');
+        const outputColor = document.querySelector('.outputColor');
+        const outputBackground = document.querySelector('.outputBackground');
+        const input = document.querySelectorAll('input');
+
+        function output() {
+            outputColor.textContent = `rgba(${oneRange.value}, ${twoRange.value}, ${threeRange.value}, 1)`;
+            outputBackground.style.backgroundColor = `rgb(${oneRange.value}, ${twoRange.value}, ${threeRange.value}, 1)`;
+        }
+        output();
+        input.forEach((e) => {
+            e.addEventListener("input", () => {
+                output();
+            });
+        })
+    </script>
+</body>
+
+</html>
