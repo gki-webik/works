@@ -1,0 +1,87 @@
+.wk-title,
+.wk-subtitle
+  word-break: break-word
+
+.wk-title em,
+.wk-title span,
+.wk-subtitle em,
+.wk-subtitle span
+  font-weight: inherit
+
+.wk-title sub,
+.wk-subtitle sub
+  font-size: 0.75em
+
+.wk-title sup,
+.wk-subtitle sup
+  font-size: 0.75em
+
+.wk-title .tag,
+.wk-subtitle .tag
+  vertical-align: middle
+
+.wk-title
+  color: #363636
+  font-size: 2rem
+  font-weight: 600
+  line-height: 1.125
+  & strong
+    color: inherit
+    font-weight: inherit
+  & p
+    margin-top: 0
+  &:not(.is-spaced) + .wk-subtitle
+    margin-top: 0rem
+    margin-bottom: 0
+  &:not(.is-spaced):not(:first-child)
+    margin-top: 1.25rem
+  &:not(.is-spaced)
+    margin-bottom: 0
+  &.is-spaced + .wk-subtitle
+    margin-top: 1.25rem
+    margin-bottom: 0
+  &.is-spaced:not(:first-child)
+    margin-top: 1.25rem
+  &.is-spaced
+    margin-bottom: 0
+  &.is-1
+    font-size: 3rem
+  &.is-2
+    font-size: 2.5rem
+  &.is-3
+    font-size: 2rem
+  &.is-4
+    font-size: 1.5rem
+  &.is-5
+    font-size: 1.25rem
+  &.is-6
+    font-size: 1rem
+  &.is-7
+    font-size: 0.75rem
+
+.wk-title:first-child
+  padding-top: 0
+  margin-top: 0
+
+.wk-subtitle
+  color: #4a4a4a
+  font-size: 1.25rem
+  font-weight: 400
+  line-height: 1.25
+  & strong
+    color: #363636
+    font-weight: 600
+  &.is-1
+    font-size: 3rem
+  &.is-2
+    font-size: 2.5rem
+  &.is-3
+    font-size: 2rem
+  &.is-4
+    font-size: 1.5rem
+  &.is-5
+    font-size: 1.25rem
+  &.is-6
+    font-size: 1rem
+  &.is-7
+    font-size: 0.75rem

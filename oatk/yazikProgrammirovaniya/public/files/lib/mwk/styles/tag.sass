@@ -1,0 +1,334 @@
+@import "variables"
+.wk-tags
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: flex-start
+
+.wk-tags .wk-tag
+  margin-bottom: 0.5rem
+
+  &:not(:last-child)
+    margin-right: 0.5rem
+
+.wk-tags:last-child
+  margin-bottom: -0.5rem
+
+.wk-tags:not(:last-child)
+  margin-bottom: 1rem
+
+.wk-tags.is-medium .wk-tag:not(.is-normal):not(.is-large)
+  font-size: 1rem
+
+.wk-tags.is-large .wk-tag:not(.is-normal):not(.is-medium)
+  font-size: 1.25rem
+
+.wk-tags.is-centered
+  justify-content: center
+
+  & .wk-tag
+    margin-right: 0.25rem
+    margin-left: 0.25rem
+
+.wk-tags.is-right
+  justify-content: flex-end
+
+  & .wk-tag:not(:first-child)
+    margin-left: 0.5rem
+
+  & .wk-tag:not(:last-child)
+    margin-right: 0
+
+.wk-tags.is-double .wk-tag
+  margin-right: 0
+
+  &:not(:first-child)
+    margin-left: 0
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  &:not(:last-child)
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+.wk-tag
+  align-items: center
+  background-color: hsl(0, 0%, 96%)
+  border-radius: 4px
+  color: hsl(0, 0%, 29%)
+  display: inline-flex
+  font-size: 0.75rem
+  height: 2em
+  justify-content: center
+  line-height: 1.5
+  padding-left: 0.75em
+  padding-right: 0.75em
+  white-space: nowrap
+
+.wk-tag .wk-btn-del
+  margin-left: 0.25rem
+  margin-right: -0.375rem
+
+.wk-tag.is-white
+  background-color: $color-0
+  color: hsl(0, 0%, 4%)
+
+.wk-tag.is-black
+  background-color: hsl(0, 0%, 4%)
+  color: hsl(0, 0%, 100%)
+
+.wk-tag.is-light
+  background-color: hsl(0, 0%, 96%)
+  color: rgba(0, 0, 0, 0.7)
+
+.wk-tag.is-dark
+  background-color: hsl(0, 0%, 21%)
+  color: #fff
+
+.wk-tag.is-primary
+  background-color: $color-3
+  color: #fff
+  &.is-light
+    background-color: $color-4
+    color: #0048b4
+
+.wk-tag.is-link
+  background-color: $color-7
+  color: #fff
+  &.is-light
+    background-color: $color-8
+    color: #3850b7
+
+.wk-tag.is-info
+  background-color: $color-5
+  color: #fff
+  &.is-light
+    background-color: $color-6
+    color: #296fa8
+
+.wk-tag.is-success
+  background-color: $color-9
+  color: #fff
+  &.is-light
+    background-color: $color-10
+    color: #257953
+
+.wk-tag.is-warning
+  background-color: $color-11
+  color: rgba(0, 0, 0, 0.7)
+  &.is-light
+    background-color: $color-12
+    color: #946c00
+
+.wk-tag.is-danger
+  background-color: $color-13
+  color: #fff
+  &.is-light
+    background-color: $color-14
+    color: #cc0f35
+
+.wk-tag.is-normal
+  font-size: 0.75rem
+
+.wk-tag.is-medium
+  font-size: 1rem
+
+.wk-tag.is-large
+  font-size: 1.25rem
+
+.wk-tag.is-del
+  margin-left: 1px
+  padding: 0
+  position: relative
+  cursor: pointer
+  width: 2em
+
+.wk-tag.is-del::before,
+.wk-tag.is-del::after
+  background-color: currentColor
+  content: ""
+  display: block
+  left: 50%
+  position: absolute
+  top: 50%
+  transform: translateX(-50%) translateY(-50%) rotate(45deg)
+  transform-origin: center center
+
+.wk-tag.is-del::before
+  height: 1px
+  width: 50%
+
+.wk-tag.is-del::after
+  height: 50%
+  width: 1px
+
+.wk-tag.is-del:hover:not(.is-primary):not(.is-info):not(.is-link):not(.is-success):not(.is-warning):not(.is-danger):not(.is-light),
+.wk-tag.is-del:focus:not(.is-primary):not(.is-info):not(.is-link):not(.is-success):not(.is-warning):not(.is-danger):not(.is-light)
+  background-color: #e8e8e8
+
+.wk-tag.is-del:active:not(.is-primary, .is-info, .is-link, .is-success, .is-warning, .is-danger, .is-light)
+  background-color: #dbdbdb
+
+.wk-tag.is-rounded
+  border-radius: 9999px
+
+a.wk-tag:hover
+  text-decoration: underline
+
+.wk-field:not(:last-child)
+  margin-bottom: 0.75rem
+
+.wk-field.has-addons
+  display: flex
+  justify-content: flex-start
+
+  & .wk-control:not(:last-child)
+    margin-right: -1px
+
+.wk-field.has-addons .wk-control:not(:first-child):not(:last-child) .wk-btn,
+.wk-field.has-addons .wk-control:not(:first-child):not(:last-child) .wk-inp,
+.wk-field.has-addons
+  .wk-control:not(:first-child):not(:last-child) .wk-select select
+    border-radius: 0
+
+.wk-field.has-addons .wk-control:first-child:not(:only-child) .wk-btn,
+.wk-field.has-addons .wk-control:first-child:not(:only-child) .wk-inp,
+.wk-field.has-addons .wk-control:first-child:not(:only-child) .wk-select select
+  border-bottom-right-radius: 0
+  border-top-right-radius: 0
+
+.wk-field.has-addons .wk-control:last-child:not(:only-child) .wk-btn,
+.wk-field.has-addons .wk-control:last-child:not(:only-child) .wk-inp,
+.wk-field.has-addons .wk-control:last-child:not(:only-child) .wk-select select
+  border-bottom-left-radius: 0
+  border-top-left-radius: 0
+
+.wk-field.has-addons .wk-control .wk-btn:hover,
+.wk-field.has-addons .wk-control .wk-btn.is-hovered,
+.wk-field.has-addons .wk-control .wk-inp:hover,
+.wk-field.has-addons .wk-control .wk-inp.is-hovered,
+.wk-field.has-addons .wk-control .wk-select select:hover,
+.wk-field.has-addons .wk-control .wk-select select.is-hovered
+  z-index: 2
+
+.wk-field.has-addons .wk-control .wk-btn:focus,
+.wk-field.has-addons .wk-control .wk-btn.is-focused,
+.wk-field.has-addons .wk-control .wk-btn:active,
+.wk-field.has-addons .wk-control .wk-btn.is-active,
+.wk-field.has-addons .wk-control .wk-inp:focus,
+.wk-field.has-addons .wk-control .wk-inp.is-focused,
+.wk-field.has-addons .wk-control .wk-inp:active,
+.wk-field.has-addons .wk-control .wk-inp.is-active,
+.wk-field.has-addons .wk-control .wk-select select:focus,
+.wk-field.has-addons .wk-control .wk-select select.is-focused,
+.wk-field.has-addons .wk-control .wk-select select:active,
+.wk-field.has-addons .wk-control .wk-select select.is-active
+  z-index: 3
+
+.wk-field.has-addons .wk-control .wk-btn:focus:hover,
+.wk-field.has-addons .wk-control .wk-btn.is-focused:hover,
+.wk-field.has-addons .wk-control .wk-btn:active:hover,
+.wk-field.has-addons .wk-control .wk-btn.is-active:hover,
+.wk-field.has-addons .wk-control .wk-inp:focus:hover,
+.wk-field.has-addons .wk-control .wk-inp.is-focused:hover,
+.wk-field.has-addons .wk-control .wk-inp:active:hover,
+.wk-field.has-addons .wk-control .wk-inp.is-active:hover,
+.wk-field.has-addons .wk-control .wk-select select:focus:hover,
+.wk-field.has-addons .wk-control .wk-select select.is-focused:hover, .wk-field.has-addons .wk-control .wk-select select:active:hover, .wk-field.has-addons .wk-control .wk-select select.is-active:hover
+  z-index: 4
+
+.wk-field.has-addons .wk-control.is-expanded
+  flex-grow: 1
+  flex-shrink: 1
+
+.wk-field.has-addons.has-addons-centered
+  justify-content: center
+
+.wk-field.has-addons.has-addons-right
+  justify-content: flex-end
+
+.wk-field.has-addons.has-addons-fullwidth .wk-control
+  flex-grow: 1
+  flex-shrink: 0
+
+.wk-field.is-grouped
+  display: flex
+  justify-content: flex-start
+
+  & > .wk-control
+    flex-shrink: 0
+
+  & > .wk-control:not(:last-child)
+    margin-bottom: 0
+    margin-right: 0.75rem
+
+  & > .wk-control.is-expanded
+    flex-grow: 1
+    flex-shrink: 1
+
+  &.is-grouped-centered
+    justify-content: center
+
+  &.is-grouped-right
+    justify-content: flex-end
+
+  &.is-grouped-multiline
+    flex-wrap: wrap
+
+.wk-field.is-grouped.is-grouped-multiline > .wk-control:last-child,
+.wk-field.is-grouped.is-grouped-multiline > .wk-control:not(:last-child)
+  margin-bottom: 0.75rem
+
+.wk-field.is-grouped.is-grouped-multiline:last-child
+  margin-bottom: -0.75rem
+
+.wk-field.is-grouped.is-grouped-multiline:not(:last-child)
+  margin-bottom: 0
+
+@media screen and (min-width: 769px), print
+  .wk-field.is-horizontal
+    display: flex
+
+.wk-field-label .label
+  font-size: inherit
+
+@media screen and (max-width: 768px)
+  .wk-field-label
+    margin-bottom: 0.5rem
+
+@media screen and (min-width: 769px), print
+  .wk-field-label
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 0
+    margin-right: 1.5rem
+    text-align: right
+    &.is-small
+      font-size: 0.75rem
+      padding-top: 0.375em
+    &.is-normal
+      padding-top: 0.375em
+    &.is-medium
+      font-size: 1.25rem
+      padding-top: 0.375em
+    &.is-large
+      font-size: 1.5rem
+      padding-top: 0.375em
+
+.wk-field-body .wk-field .wk-field
+  margin-bottom: 0
+
+@media screen and (min-width: 769px), print
+  .wk-field-body
+    display: flex
+    flex-basis: 0
+    flex-grow: 5
+    flex-shrink: 1
+    & .wk-field
+      margin-bottom: 0
+    & > .wk-field
+      flex-shrink: 1
+    & > .wk-field:not(.is-narrow)
+      flex-grow: 1
+    & > .wk-field:not(:last-child)
+      margin-right: 0.75rem

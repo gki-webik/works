@@ -1,0 +1,203 @@
+@import "variables"
+
+$tr: all 0.1s ease-in-out
+
+.wk-panel
+  border-radius: 6px
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02)
+  font-size: 1rem
+  background-color: white
+
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+
+  &.is-white &-heading
+    background-color: hsl(0, 0%, 100%)
+    color: hsl(0, 0%, 4%)
+
+  &.is-white &-tabs a.is-active
+    border-bottom-color: hsl(0, 0%, 100%)
+
+  &.is-white &-block.is-active &-icon
+    color: hsl(0, 0%, 100%)
+
+  &.is-black &-heading
+    background-color: hsl(0, 0%, 4%)
+    color: hsl(0, 0%, 100%)
+
+  &.is-black &-tabs a.is-active
+    border-bottom-color: hsl(0, 0%, 4%)
+
+  &.is-black &-block.is-active &-icon
+    color: hsl(0, 0%, 4%)
+
+  &.is-light &-heading
+    background-color: hsl(0, 0%, 96%)
+    color: rgba(0, 0, 0, 0.7)
+
+  &.is-light &-tabs a.is-active
+    border-bottom-color: hsl(0, 0%, 96%)
+
+  &.is-light &-block.is-active &-icon
+    color: hsl(0, 0%, 76%)
+
+  &.is-dark &-heading
+    background-color: hsl(0, 0%, 21%)
+    color: #fff
+
+  &.is-dark &-tabs a.is-active
+    border-bottom-color: hsl(0, 0%, 21%)
+
+  &.is-dark &-block.is-active &-icon
+    color: hsl(0, 0%, 21%)
+
+  &.is-primary &-heading
+    background-color: $color-3
+    color: #fff
+
+  &.is-primary &-tabs a.is-active
+    border-bottom-color: $color-3
+
+  &.is-primary &-block.is-active &-icon
+    color: $color-3
+
+  &.is-link &-heading
+    background-color: $color-7
+    color: #fff
+
+  &.is-link &-tabs a.is-active
+    border-bottom-color: $color-7
+
+  &.is-link &-block.is-active &-icon
+    color: $color-7
+
+  &.is-info &-heading
+    background-color: $color-5
+    color: #fff
+
+  &.is-info &-tabs a.is-active
+    border-bottom-color: $color-5
+
+  &.is-info &-block.is-active &-icon
+    color: $color-5
+
+  &.is-success &-heading
+    background-color: hsl(153, 53%, 53%)
+    color: #fff
+
+  &.is-success &-tabs a.is-active
+    border-bottom-color: hsl(153, 53%, 53%)
+
+  &.is-success &-block.is-active &-icon
+    color: hsl(153, 53%, 53%)
+
+  &.is-warning &-heading
+    background-color: hsl(44, 100%, 77%)
+    color: rgba(0, 0, 0, 0.7)
+
+  &.is-warning &-tabs a.is-active
+    border-bottom-color: hsl(44, 100%, 77%)
+
+  &.is-warning &-block.is-active &-icon
+    color: hsl(44, 100%, 77%)
+
+  &.is-danger &-heading
+    background-color: hsl(348, 86%, 61%)
+    color: #fff
+
+  &.is-danger &-tabs a.is-active
+    border-bottom-color: hsl(348, 86%, 61%)
+
+  &.is-danger &-block.is-active &-icon
+    color: hsl(348, 86%, 61%)
+
+.wk-panel-tabs:not(:last-child),
+.wk-panel-block:not(:last-child)
+  border-bottom: 1px solid hsl(0, 0%, 93%)
+
+.wk-panel-heading
+  background-color: #404654
+  border-radius: 6px 6px 0 0
+  color: white
+  font-size: 1.25em
+  line-height: 1.25
+  padding: 1.2em 1em
+
+.wk-panel-tabs
+  align-items: flex-end
+  display: flex
+  font-size: 1em
+  justify-content: center
+  flex-wrap: wrap
+
+  & a
+    border-bottom: 1px solid hsl(0, 0%, 86%)
+    margin-bottom: -1px
+    padding: 0.75em
+
+  & a.is-active
+    border-bottom-color: hsl(0, 0%, 29%)
+    color: hsl(0, 0%, 21%)
+
+.wk-panel-tabs a
+  cursor: pointer
+  color: #002fff
+  font-weight: 400
+  transition: $tr
+  &:hover:not(.is-active)
+    color: #0066ff
+
+.wk-panel-block
+  align-items: center
+  color: hsl(0, 0%, 21%)
+  display: flex
+  justify-content: flex-start
+  padding: 0.6em 0.75em
+
+  & input[type=checkbox]
+    margin-right: 0.75em !important
+
+  & > .wk-control
+    flex-grow: 1
+    flex-shrink: 1
+    width: 100%
+
+  &.is-wrapped
+    flex-wrap: wrap
+
+  &.is-active
+    border-left-color: hsl(229, 53%, 53%)
+    color: hsl(0, 0%, 21%)
+
+  &.is-active .wk-panel-icon
+    color: black
+  &.is-active.is-primary .wk-panel-icon
+    color: $color-3
+
+  &:last-child
+    border-bottom-left-radius: 6px
+    border-bottom-right-radius: 6px
+
+a.wk-panel-block,
+label
+  cursor: pointer
+  transition: $tr
+
+a.wk-panel-block:hover,
+label:hover
+  background-color: hsl(0, 0%, 96%)
+
+.wk-panel-icon
+  display: inline-block
+  font-size: 14px
+  height: 1em
+  line-height: 1em
+  text-align: center
+  vertical-align: top
+  width: 1em
+  color: hsl(0, 0%, 48%)
+  margin-right: 0.75em
+
+  & .fa
+    font-size: inherit
+    line-height: inherit

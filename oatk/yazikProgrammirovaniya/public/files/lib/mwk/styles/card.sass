@@ -1,0 +1,147 @@
+.wk-card
+  background-color: hsl(0, 0%, 100%)
+  border-radius: 0.25rem
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02)
+  color: hsl(0, 0%, 29%)
+  position: relative
+  display: inline-flex
+  flex-direction: column
+  max-width: 400px
+  &.is-reverse-y
+    flex-direction: column-reverse
+  &.is-reverse-x
+    flex-direction: row
+    max-width: 700px
+    overflow-x: auto
+  &.is-reverse-x &-header
+    min-width: 160px
+  &.is-reverse-x &-content
+    min-width: 360px
+
+.wk-card:not(:first-child)
+  margin-top: 10px
+
+.wk-card-footer:first-child,
+.wk-card-content:first-child,
+.wk-card-header:first-child
+  border-top-left-radius: 0.25rem
+  border-top-right-radius: 0.25rem
+
+.wk-card-footer:last-child,
+.wk-card-content:last-child,
+.wk-card-header:last-child
+  border-bottom-left-radius: 0.25rem
+  border-bottom-right-radius: 0.25rem
+
+.wk-card-header
+  background-color: transparent
+  -webkit-box-align: stretch
+  -ms-flex-align: stretch
+  align-items: stretch
+  box-shadow: 0 0.125em 0.25em rgba(10, 10, 10, 0.1)
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  &-title
+    padding: 1rem
+  &-title.is-centered
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+
+.wk-card-image:first-child img
+  border-top-left-radius: 0.5rem
+  border-top-right-radius: 0.5rem
+
+.wk-card-image:last-child img
+  border-bottom-left-radius: 0.5rem
+  border-bottom-right-radius: 0.5rem
+
+.wk-card-content
+  background-color: transparent
+  padding: 1.5rem
+
+.wk-card-footer
+  background-color: transparent
+  border-top: 1px solid hsl(0, 0%, 93%)
+  align-items: stretch
+  display: flex
+  flex-wrap: wrap
+  &-item
+    align-items: center
+    display: flex
+    flex-basis: 0
+    flex-grow: 1
+    border-left: 1px solid hsl(0, 0%, 93%)
+    border-bottom: 1px solid hsl(0, 0%, 93%)
+    flex-shrink: 0
+    justify-content: center
+    padding: 0.75rem
+  &-item:not(:last-child)
+    border-right: 1px solid hsl(0, 0%, 93%)
+
+.wk-card .wk-media:not(:last-child)
+  margin-bottom: 1.5rem
+
+.wk-card .wk-media:not(:last-child)
+  margin-bottom: 1.5rem
+
+.wk-media
+  display: flex
+  align-items: center
+
+  & .content:not(:last-child)
+    margin-bottom: 0.75rem
+
+.wk-media .wk-media .content:not(:last-child),
+.wk-media .wk-media .control:not(:last-child)
+  margin-bottom: 0.5rem
+
+.wk-media .wk-media .wk-media
+  padding-top: 0.5rem
+
+  & + .wk-media
+    margin-top: 0.5rem
+
+.wk-media + .wk-media
+  border-top: 1px solid rgba(219, 219, 219, 0.5)
+  margin-top: 1rem
+  padding-top: 1rem
+
+.wk-media.is-large + .wk-media
+  margin-top: 1.5rem
+  padding-top: 1.5rem
+
+.wk-media-left,
+.wk-media-right
+  flex-basis: auto
+  flex-grow: 0
+  flex-shrink: 0
+
+.wk-media-left
+  margin-right: 1rem
+
+.wk-media-right
+  margin-left: 1rem
+
+.wk-media-content
+  display: flex
+  flex-direction: column
+
+@media screen and (max-width: 768px)
+  .wk-media-content
+    overflow-x: auto
+
+.wk-card figure
+  margin: 0
+
+.wk-card a
+  color: blue
+
+.wk-card-header-title .wk-title
+  margin-top: 0
+
+.wk-card-footer-item.is-hover
+  transition: all 0.1s ease-in-out
+  &:hover
+    background-color: #0088ff0f

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+*
+    box-sizing: border-box
+
+body
+    font-family: Montserrat, sans-serif
+    margin: 0
+    padding: 0
+    font-size: 17px
+
+.is-hidden
+    opacity: 0 !important
+    visibility: hidden !important
+.is-none
+    opacity: 0 !important
+    display: none !important
+    visibility: hidden !important
+
+a
+    text-decoration: none
+
+footer
+    top: 170px
+
+main.test
+    min-height: 90vh
+    form
+        min-height: 90vh
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 10px
+        align-items: center
+        justify-content: center
+        padding: 10px
+        h1
+            max-width: 500px 
+            font-size: 1.8rem
+            text-align: center
+            font-weight: 500
+            color: #47495c
+            @media screen and (max-width: 400px)
+                font-size: 1.4rem
+        div
+            display: flex
+            flex-direction: column
+            gap: 30px
+            max-width: 400px
+            width: 100%
+            label
+                display: flex
+                flex-direction: column
+                gap: 5px
+                span
+                    font-size: 15px
+                input
+                    padding: 10px
+                    font-size: 17px
+                    border: 0
+                    outline: 1px solid #ddd
+                    transition: outline 0.15s ease-in-out
+                    &:focus
+                        outline: 1px solid dodgerblue
+
+            button
+                padding: 10px
+                border: 0
+                background-color: dodgerblue
+                color: white
+                cursor: pointer
+                transition: background-color 0.15s ease-in-out
+                &:hover
+                    background-color: #0081ff
+    & .test
+        min-height: 90vh
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 10px
+        align-items: center
+        justify-content: center
+        h2
+            max-width: 500px
+            font-size: 1.8rem
+            text-align: center
+            font-weight: 500
+            color: #47495c
+            @media screen and (max-width: 400px)
+                font-size: 1.4rem
+
+        div.task
+            display: flex
+            flex-direction: column
+            gap: 20px
+            padding: 20px
+            .img
+                max-width: 600px
+                position: relative
+                &.is-success
+                    max-width: 193px
+                    text-align: center
+                    margin: 0 auto
+                .mask
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    z-index: 2
+                img
+                    width: 100%
+                    user-drag: none
+            div
+                label
+                    display: flex
+                    flex-direction: column
+                    gap: 5px
+                span
+                    font-size: 15px
+                input
+                    padding: 10px
+                    font-size: 17px
+                    border: 0
+                    outline: 1px solid #ddd
+                    transition: outline 0.15s ease-in-out
+                    &:focus
+                        outline: 1px solid dodgerblue
+            div.buttons
+                display: flex
+                gap: 10px
+                button
+                    width: 100%
+                    padding: 10px
+                    border: 0
+                    background-color: dodgerblue
+                    color: white
+                    cursor: pointer
+                    transition: background-color 0.15s ease-in-out
+                    &.is-prev
+                        background-color: #65656f
+                        &:hover
+                            background-color: #464657
+                    &:hover
+                        background-color: #0081ff
+.is-error
+    padding: 10px 15px
+    text-align: center
+    font-size: 17px
+    color: red
+    cursor: default
+    background-color: #ffecec
+
+.is-centered
+    text-align: center

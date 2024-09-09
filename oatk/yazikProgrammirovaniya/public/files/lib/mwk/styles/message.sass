@@ -1,0 +1,181 @@
+@import "variables"
+
+.wk-message:not(:last-child)
+  margin-bottom: 1.5rem
+
+.wk-message
+  background-color: hsl(0, 0%, 96%)
+  border-radius: 4px
+  font-size: 1rem
+
+  & strong
+    color: currentColor
+
+  & a:not(.button):not(.tag):not(.dropdown-item)
+    color: currentColor
+    text-decoration: none
+    cursor: pointer
+    color: $color-3
+    &:hover
+      color: blue
+
+  &.is-small
+    font-size: 0.75rem
+
+  &.is-medium
+    font-size: 1.25rem
+
+  &.is-large
+    font-size: 1.5rem
+
+  &.is-white
+    background-color: white
+
+  &.is-white &-header
+    background-color: hsl(0, 0%, 100%)
+    color: hsl(0, 0%, 4%)
+
+  &.is-white &-body
+    border-color: hsl(0, 0%, 100%)
+
+  &.is-black
+    background-color: #fafafa
+
+  &.is-black &-header
+    background-color: hsl(0, 0%, 4%)
+    color: hsl(0, 0%, 100%)
+
+  &.is-black &-body
+    border-color: hsl(0, 0%, 4%)
+
+  &.is-light
+    background-color: #fafafa
+
+  &.is-light &-header
+    background-color: hsl(0, 0%, 96%)
+    color: rgba(0, 0, 0, 0.7)
+
+  &.is-light &-body
+    border-color: hsl(0, 0%, 96%)
+
+  &.is-dark
+    background-color: #fafafa
+
+  &.is-dark &-header
+    background-color: hsl(0, 0%, 21%)
+    color: #fff
+
+  &.is-dark &-body
+    border-color: hsl(0, 0%, 21%)
+
+  &.is-primary
+    background-color: $color-4
+
+  &.is-primary &-header
+    background-color: $color-3
+    color: #fff
+
+  &.is-primary &-body
+    border-color: $color-3
+    color: #2a65bc
+
+  &.is-link
+    background-color: #eff1fa
+
+  &.is-link &-header
+    background-color: hsl(229, 53%, 53%)
+    color: #fff
+
+  &.is-link &-body
+    border-color: hsl(229, 53%, 53%)
+    color: #3850b7
+
+  &.is-info
+    background-color: #eff5fb
+
+  &.is-info &-header
+    background-color: hsl(207, 61%, 53%)
+    color: #fff
+
+  &.is-info &-body
+    border-color: hsl(207, 61%, 53%)
+    color: #296fa8
+
+  &.is-success
+    background-color: #effaf5
+
+  &.is-success &-header
+    background-color: hsl(153, 53%, 53%)
+    color: #fff
+
+  &.is-success &-body
+    border-color: hsl(153, 53%, 53%)
+    color: #257953
+
+  &.is-warning
+    background-color: #fffaeb
+
+  &.is-warning &-header
+    background-color: hsl(44, 100%, 77%)
+    color: rgba(0, 0, 0, 0.7)
+
+  &.is-warning &-body
+    border-color: hsl(44, 100%, 77%)
+    color: #946c00
+
+  &.is-danger
+    background-color: #feecf0
+
+  &.is-danger &-header
+    background-color: hsl(348, 86%, 61%)
+    color: #fff
+
+  &.is-danger &-body
+    border-color: hsl(348, 86%, 61%)
+    color: #cc0f35
+
+  &-header
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    background-color: hsl(0, 0%, 29%)
+    border-radius: 4px 4px 0 0
+    color: #fff
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    font-weight: 700
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    line-height: 1.25
+    padding: 0.75em 1em
+    position: relative
+
+  &-header .delete
+    -webkit-box-flex: 0
+    -ms-flex-positive: 0
+    flex-grow: 0
+    -ms-flex-negative: 0
+    flex-shrink: 0
+    margin-left: 0.75em
+
+  &-header + &-body
+    border-width: 0
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+
+  &-body
+    border-color: hsl(0, 0%, 86%)
+    border-radius: 4px
+    border-style: solid
+    border-width: 0 0 0 4px
+    color: hsl(0, 0%, 29%)
+    padding: 1.25em 1.5em
+
+.wk-message-body code,
+.wk-message-body pre
+  background-color: hsl(0, 0%, 100%)
+
+  & code
+    background-color: transparent

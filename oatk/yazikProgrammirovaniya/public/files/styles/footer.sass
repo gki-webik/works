@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+$color-blue1: #146fef
+$color-blue2: #1569de
+$color-1: #F2F3F6
+$color-2: #1A304B
+$color-3: #2D4968
+
+$font_r: "Gilroy-Regular"
+$font_m: "Gilroy-Medium"
+$font_b: "Gilroy-Bold"
+
+@font-face
+    font-family: $font_r
+    src: url("../../../files/fonts/Gilroy/Gilroy-Regular.ttf")
+
+@font-face
+    font-family: $font_m
+    src: url("../../../files/fonts/Gilroy/Gilroy-Medium.ttf")
+
+@font-face
+    font-family: $font_b
+    src: url("../../../files/fonts/Gilroy/Gilroy-Bold.ttf")
+*
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+    scrollbar-color: #9195ac #dddddd !important
+    scrollbar-width: thin !important
+    &::-webkit-scrollbar
+        width: 6px !important
+        height: 6px !important
+    &::-webkit-scrollbar-thumb
+        background: #9195ac !important
+        border-radius: 20px !important
+    &::-webkit-scrollbar-track
+        background: #9195ac !important
+
+body
+    font-family: Roboto
+    margin: 0
+    padding: 0
+    font-size: 18px
+    color: $color-2
+
+label:hover
+    background-color: transparent !important
+
+.max_container
+    max-width: 3000px
+    margin: 0 auto
+
+.wk-navbar
+    max-width: 3000px
+
+footer
+    margin: 0
+    padding: 0
+    width: 100%
+    position: relative
+    transition: 0.3s left ease-in-out
+    @media screen and (max-width: 690px)
+        left: 0 !important
+        width: 100% !important
+    *
+        font-family: $font_r
+    & .footer
+        background-color: #F2F3F6
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 20px 40px
+        gap: 30px
+        position: relative
+        &_top
+            &__logo
+                font-size: 24px
+                display: flex
+                align-items: center
+                gap: 20px
+                letter-spacing: 2px
+                a
+                    text-decoration: none
+                    font-family: $font_m
+                    font-weight: 500
+                    color: #2D4968
+                    transition: all 0.1s ease-in-out
+                    &:hover
+                        color: #1569de
+                img
+                    width: 40px
+        &_bottom
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin: 0 auto
+            gap: 10px
+            width: 100%
+            max-width: 1300px
+            nav
+                display: flex
+                flex-direction: column
+                gap: 7px
+                a
+                    text-decoration: none
+                    color: #2D4968
+                    transition: color 0.1s ease-in-out
+                    i
+                        font-size: 25px
+                        vertical-align: middle
+                        padding-right: 10px
+                    &:hover
+                        color: #1569de
+            &__block
+                width: 100%
+                @media screen and (min-width: 501px)
+                    max-width: 200px
+                h3
+                    font-family: $font_m
+                    font-weight: 500
+        &_copyright
+            a
+                text-decoration: none
+                color: #2D4968
+                transition: color 0.1s ease-in-out
+                &:hover
+                    color: #1569de

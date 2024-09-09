@@ -1,0 +1,115 @@
+@import "variables"
+.wk-kroshki
+  user-select: none
+  &
+    font-size: 1rem
+    white-space: nowrap
+  & a
+    align-items: center
+    color: hsl(229, 53%, 53%)
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    justify-content: center
+    padding: 0 0.75em
+  & a:hover
+    color: hsl(0, 0%, 21%)
+  & li
+    align-items: center
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+  & li:first-child a
+    padding-left: 0
+  & li.is-active a
+    color: hsl(0, 0%, 21%)
+    cursor: default
+    pointer-events: none
+  & li + li::before
+    color: hsl(0, 0%, 71%)
+    content: "/"
+
+.wk-kroshki ul,
+.wk-kroshki ol
+  align-items: flex-start
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+
+.wk-kroshki .icon:first-child
+  margin-right: 0.5em
+
+.wk-kroshki .icon:last-child
+  margin-left: 0.5em
+
+.wk-kroshki.is-centered ol,
+.wk-kroshki.is-centered ul
+  justify-content: center
+
+.wk-kroshki.is-right ol,
+.wk-kroshki.is-right ul
+  justify-content: flex-end
+
+.wk-kroshki.is-small
+  font-size: 0.75rem
+
+.wk-kroshki.is-medium
+  font-size: 1.25rem
+
+.wk-kroshki.is-large
+  font-size: 1.5rem
+
+.wk-kroshki.is-type-1 li + li::before
+  content: "→"
+
+.wk-kroshki.is-type-2 li + li::before
+  content: "•"
+
+.wk-kroshki.is-type-3 li + li::before
+  content: "·"
+
+.wk-kroshki.is-type-4 li + li::before
+  content: "≻"
+
+.wk-kroshki.is-type-5 li + li::before
+  content: "—"
+
+.wk-kroshki.is-type-6 li + li::before
+  content: "×"
+
+.wk-kroshki.is-type-7 li + li::before
+  content: "►"
+
+.wk-kroshki.is-primary ul li *,
+.wk-kroshki.is-primary ul li::before
+  color: $color-3
+
+.wk-kroshki.is-secondary ul li *,
+.wk-kroshki.is-secondary ul li::before
+  color: rgb(108, 117, 125)
+
+.wk-kroshki.is-success ul li *,
+.wk-kroshki.is-success ul li::before
+  color: rgb(25, 135, 84)
+
+.wk-kroshki.is-danger ul li *,
+.wk-kroshki.is-danger ul li::before
+  color: rgb(220, 53, 69)
+
+.wk-kroshki.is-warning ul li *,
+.wk-kroshki.is-warning ul li::before
+  color: rgb(255, 193, 7)
+
+.wk-kroshki.is-info ul li *,
+.wk-kroshki.is-info ul li::before
+  color: rgb(13, 202, 240)
+
+.wk-kroshki.is-light ul li *,
+.wk-kroshki.is-light ul li::before
+  color: rgb(248, 249, 250)
+
+.wk-kroshki.is-dark ul li *,
+.wk-kroshki.is-dark ul li::before
+  color: rgb(33, 37, 41)

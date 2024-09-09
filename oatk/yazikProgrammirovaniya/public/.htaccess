@@ -1,0 +1,37 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Перенаправление
+  RewriteCond %{REQUEST_URI} ^/api?$
+  RewriteRule ^ /server/api/api.php [L]
+
+  # Убираем расширение .php из URL
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.php -f
+  RewriteRule ^(.*?)/?$ $1.php [L]
+
+  # Если файл или директория существуют, используйте их напрямую
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # В противном случае перенаправьте все запросы на index.html
+  RewriteRule ^ index.html [L]
+
+  # Установка переменной ORIGIN для разрешенных доменов
+  RewriteCond %{HTTP:Origin} ^http://localhost:5173$ [OR]
+  RewriteCond %{HTTP:Origin} ^https://gki-wbk.ru$ [OR]
+  RewriteCond %{HTTP:Origin} ^https://gki-info.ru$ [OR]
+  RewriteCond %{HTTP:Origin} ^https://gki-webik.ru$ [OR]
+  RewriteCond %{HTTP:Origin} ^https://magic-wk.ru$ [OR]
+  RewriteCond %{HTTP:Origin} ^https://klicks.ru$ [OR]
+  RewriteCond %{HTTP:Origin} ^https://div-dev.ru$
+  RewriteRule .* - [E=ORIGIN:%{HTTP:Origin}]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "%{ORIGIN}e" env=ORIGIN
+    Header set Access-Control-Allow-Credentials "true"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>

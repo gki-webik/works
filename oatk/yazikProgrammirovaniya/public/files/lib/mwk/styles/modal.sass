@@ -1,0 +1,165 @@
+@import "variables"
+
+.wk-modal-background,
+.wk-modal
+    bottom: 0
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+
+.wk-modal-close, .wk-modal-delete
+    user-select: none
+    background-color: rgba(10, 10, 10, 0.2)
+    border: none
+    border-radius: 9999px
+    cursor: pointer
+    pointer-events: auto
+    display: inline-block
+    flex-grow: 0
+    flex-shrink: 0
+    font-size: 0
+    height: 20px
+    max-height: 20px
+    max-width: 20px
+    min-height: 20px
+    min-width: 20px
+    outline: none
+    position: relative
+    vertical-align: top
+    width: 20px
+
+.wk-modal-close::before, .wk-modal-delete::before, .wk-modal-close::after, .wk-modal-delete::after
+    background-color: hsl(0, 0%, 100%)
+    content: ""
+    display: block
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    transform-origin: center center
+
+.wk-modal-close::before, .wk-modal-delete::before
+    height: 2px
+    width: 50%
+
+.wk-modal-close::after, .wk-modal-delete::after
+    height: 50%
+    width: 2px
+
+.wk-modal-close:hover, .wk-modal-delete:hover, .wk-modal-close:focus, .wk-modal-delete:focus
+    background-color: rgba(10, 10, 10, 0.3)
+
+.wk-modal-close:active, .wk-modal-delete:active
+    background-color: rgba(10, 10, 10, 0.4)
+
+.is-small.wk-modal-close, .is-small.wk-modal-delete
+    height: 16px
+    max-height: 16px
+    max-width: 16px
+    min-height: 16px
+    min-width: 16px
+    width: 16px
+
+.is-medium.wk-modal-close, .is-medium.wk-modal-delete
+    height: 24px
+    max-height: 24px
+    max-width: 24px
+    min-height: 24px
+    min-width: 24px
+    width: 24px
+
+.is-large.wk-modal-close, .is-large.wk-modal-delete
+    height: 32px
+    max-height: 32px
+    max-width: 32px
+    min-height: 32px
+    min-width: 32px
+    width: 32px
+
+.wk-modal
+    align-items: center
+    display: none
+    flex-direction: column
+    justify-content: center
+    overflow: hidden
+    position: fixed
+    z-index: 2147483647
+
+.wk-modal.is-active
+    display: flex
+
+.wk-modal-background
+    background-color: rgba(10, 10, 10, 0.86)
+
+.wk-modal-card-title
+    margin: 0
+
+.wk-modal-content,
+.wk-modal-card
+    margin: 0 20px
+    max-height: calc(100vh - 160px)
+    overflow: auto
+    position: relative
+    width: 100%
+
+@media screen and (min-width: 769px)
+    .wk-modal-content,
+    .wk-modal-card
+        margin: 0 auto
+        max-height: calc(100vh - 40px)
+        max-width: 750px
+
+.wk-modal-close
+    background: none
+    height: 40px
+    position: fixed
+    right: 20px
+    top: 20px
+    width: 40px
+
+.wk-modal-card
+    display: flex
+    flex-direction: column
+    max-height: calc(100vh - 40px)
+    overflow: hidden
+
+.wk-modal-card-head,
+.wk-modal-card-foot
+    align-items: center
+    background-color: hsl(0, 0%, 96%)
+    display: flex
+    flex-shrink: 0
+    justify-content: flex-start
+    padding: 2rem
+    position: relative
+
+.wk-modal-card-head
+    border-bottom: 1px solid hsl(0, 0%, 86%)
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+
+.wk-modal-card-title
+    color: #363636
+    flex-grow: 1
+    flex-shrink: 0
+    font-size: 1.5rem
+    line-height: 1
+    width: 90%
+
+.wk-modal-card-foot
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    border-top: 1px solid hsl(0, 0%, 86%)
+
+    & .button:not(:last-child)
+        margin-right: 0.5em
+
+.wk-modal-card-body
+    background-color: hsl(0, 0%, 100%)
+    flex-grow: 1
+    flex-shrink: 1
+    overflow: auto
+    padding: 1.5rem
+    & *
+        color: #363636

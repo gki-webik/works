@@ -1,0 +1,238 @@
+@import "variables"
+
+.wk-tbd:not(:last-child),
+.wk-tbd-container:not(:last-child),
+.wk-table:not(:last-child),
+.wk-table-container:not(:last-child)
+  margin-bottom: 1.5rem
+.wk-table
+  background-color: $color-0
+  color: $color-1
+
+  &.is-transparent
+    background-color: transparent !important
+
+.wk-tbd
+  background-color: $color-0
+  color: $color-1
+
+  &.is-transparent
+    background-color: transparent !important
+
+.wk-table td,
+.wk-table th,
+.wk-tbd td,
+.wk-tbd th
+  border: 1px solid hsl(0, 0%, 86%)
+  border-width: 0 0 1px
+  padding: 0.5em 0.75em
+  vertical-align: top
+
+.wk-table td.is-white,
+.wk-table th.is-white,
+.wk-tbd td.is-white,
+.wk-tbd th.is-white
+  background-color: $color-0
+  border-color: $color-0
+  color: hsl(0, 0%, 4%)
+
+.wk-table td.is-black,
+.wk-table th.is-black,
+.wk-tbd td.is-black,
+.wk-tbd th.is-black
+  background-color: hsl(0, 0%, 4%)
+  border-color: hsl(0, 0%, 4%)
+  color: hsl(0, 0%, 100%)
+
+.wk-table td.is-light,
+.wk-table th.is-light,
+.wk-tbd td.is-light,
+.wk-tbd th.is-light
+  background-color: hsl(0, 0%, 96%)
+  border-color: hsl(0, 0%, 96%)
+  color: rgba(0, 0, 0, 0.7)
+
+.wk-table td.is-dark,
+.wk-table th.is-dark,
+.wk-tbd td.is-dark,
+.wk-tbd th.is-dark
+  background-color: hsl(0, 0%, 21%)
+  border-color: hsl(0, 0%, 21%)
+  color: $color-0
+
+.wk-table td.is-primary,
+.wk-table th.is-primary
+.wk-tbd td.is-primary,
+.wk-tbd th.is-primary
+  background-color: $color-3
+  border-color: $color-3
+  color: $color-0
+
+.wk-table td.is-link,
+.wk-table th.is-link,
+.wk-tbd td.is-link,
+.wk-tbd th.is-link
+  background-color: $color-7
+  border-color: $color-7
+  color: $color-0
+
+.wk-table td.is-info,
+.wk-table th.is-info
+.wk-tbd td.is-info,
+.wk-tbd th.is-info
+  background-color: $color-5
+  border-color: $color-5
+  color: $color-0
+
+.wk-table td.is-success,
+.wk-table th.is-success
+.wk-tbd td.is-success,
+.wk-tbd th.is-success
+  background-color: $color-9
+  border-color: $color-9
+  color: $color-0
+
+.wk-table td.is-warning,
+.wk-table th.is-warning
+.wk-tbd td.is-warning,
+.wk-tbd th.is-warning
+  background-color: $color-11
+  border-color: $color-11
+  color: rgba(0, 0, 0, 0.7)
+
+.wk-table td.is-danger,
+.wk-table th.is-danger
+.wk-tbd td.is-danger,
+.wk-tbd th.is-danger
+  background-color: $color-13
+  border-color: $color-13
+  color: $color-0
+
+.wk-table td.is-narrow,
+.wk-table th.is-narrow
+.wk-tbd td.is-narrow,
+.wk-tbd th.is-narrow
+  white-space: nowrap
+  width: 1%
+
+.wk-table td.is-selected,
+.wk-table th.is-selected
+.wk-tbd td.is-selected,
+.wk-tbd th.is-selected
+  background-color: hsl(215, 100%, 50%)
+  color: #fff
+
+.wk-table td.is-selected a,
+.wk-table td.is-selected strong,
+.wk-table th.is-selected a,
+.wk-table th.is-selected strong,
+.wk-tbd td.is-selected a,
+.wk-tbd td.is-selected strong,
+.wk-tbd th.is-selected a,
+.wk-tbd th.is-selected strong
+  color: currentColor
+
+.wk-table th
+  color: hsl(0, 0%, 21%)
+
+  &:not([align])
+    text-align: left
+.wk-tbd th
+  color: hsl(0, 0%, 21%)
+
+  &:not([align])
+    text-align: left
+
+.wk-table tr.is-selected,
+.wk-tbd tr.is-selected
+  background-color: hsl(215, 100%, 50%)
+  color: #fff
+
+.wk-table tr.is-selected a,
+.wk-table tr.is-selected strong,
+.wk-tbd tr.is-selected a,
+.wk-tbd tr.is-selected strong
+  color: currentColor
+
+.wk-table tr.is-selected td,
+.wk-table tr.is-selected th,
+.wk-tbd tr.is-selected td,
+.wk-tbd tr.is-selected th
+  border-color: #fff
+  color: currentColor
+
+.wk-table thead,
+.wk-tbd thead
+  background-color: transparent
+
+.wk-table thead td,
+.wk-table thead th,
+.wk-tbd thead td,
+.wk-tbd thead th
+  border-width: 0 0 2px
+  color: hsl(0, 0%, 21%)
+
+.wk-table tfoot,
+.wk-tbd tfoot
+  background-color: transparent
+
+.wk-table tfoot td,
+.wk-table tfoot th,
+.wk-tbd tfoot td,
+.wk-tbd tfoot th
+  border-width: 2px 0 0
+  color: hsl(0, 0%, 21%)
+
+.wk-table tbody,
+.wk-tbd tbody
+  background-color: transparent
+
+.wk-table tbody tr:last-child td,
+.wk-table tbody tr:last-child th,
+.wk-tbd tbody tr:last-child td,
+.wk-tbd tbody tr:last-child th
+  border-bottom-width: 0
+
+.wk-table.is-bordered td,
+.wk-table.is-bordered th
+.wk-tbd.is-bordered td,
+.wk-tbd.is-bordered th
+  border-width: 1px
+
+.wk-table.is-bordered tr:last-child td,
+.wk-table.is-bordered tr:last-child th,
+.wk-tbd.is-bordered tr:last-child td,
+.wk-tbd.is-bordered tr:last-child th
+  border-bottom-width: 1px
+
+.wk-table.is-fullwidth,
+.wk-tbd.is-fullwidth
+  width: 100%
+
+.wk-table.is-hover tbody tr:not(.is-selected):hover,
+.wk-tbd.is-hover tbody tr:not(.is-selected):hover
+  background-color: hsl(0, 0%, 98%)
+
+.wk-table.is-hover.is-line tbody tr:not(.is-selected):hover,
+.wk-tbd.is-hover.is-line tbody tr:not(.is-selected):hover
+  background-color: hsl(0, 0%, 98%)
+
+.wk-table.is-hover.is-line tbody tr:not(.is-selected):hover:nth-child(even),
+.wk-tbd.is-hover.is-line tbody tr:not(.is-selected):hover:nth-child(even)
+  background-color: hsl(0, 0%, 96%)
+
+.wk-table.is-narrow td,
+.wk-table.is-narrow th,
+.wk-tbd.is-narrow td,
+.wk-tbd.is-narrow th
+  padding: 0.25em 0.5em
+
+.wk-table.is-line tbody tr:not(.is-selected):nth-child(even),
+.wk-tbd.is-line tbody tr:not(.is-selected):nth-child(even)
+  background-color: hsl(0, 0%, 98%)
+
+.wk-table-container,
+.wk-tbd-container
+  overflow: auto
+  overflow-y: hidden
+  max-width: 100%

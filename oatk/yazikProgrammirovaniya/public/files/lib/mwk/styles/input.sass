@@ -1,0 +1,122 @@
+@import "variables"
+
+.wk-input
+    align-items: center
+    border: 1px solid transparent
+    border-radius: 4px
+    box-shadow: none
+    display: inline-flex
+    font-size: 1rem
+    height: 2.5em
+    justify-content: flex-start
+    line-height: 1.5
+    padding-bottom: calc(0.5em - 1px)
+    padding-left: calc(0.75em - 1px)
+    padding-right: calc(0.75em - 1px)
+    padding-top: calc(0.5em - 1px)
+    position: relative
+    vertical-align: top
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+    background-color: hsl(0, 0%, 100%)
+    border-color: hsl(0, 0%, 86%)
+    border-radius: 4px
+    color: hsl(0, 0%, 21%)
+    margin: 0
+    box-shadow: inset 0 0.0625em 0.185em rgba(10, 10, 10, 0.05)
+    max-width: 100%
+    width: 100%
+    transition: 0.13s all ease-in-out
+    &[type=checkbox],
+    &[type=radio]
+        vertical-align: baseline
+    &:focus,
+    &:active,
+    &.is-active
+        border-color: hsl(229, 53%, 53%)
+        box-shadow: 0 0 0 0.185em rgba(72, 95, 199, 0.25)
+        outline: none
+    &::placeholder
+        color: rgba(54, 54, 54, 0.3)
+    &.is-white
+        border-color: hsl(0, 0%, 100%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(255, 255, 255, 0.25)
+    &.is-black
+        border-color: hsl(0, 0%, 4%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(10, 10, 10, 0.25)
+    &.is-light
+        border-color: hsl(0, 0%, 96%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(245, 245, 245, 0.25)
+    &.is-dark
+        border-color: hsl(0, 0%, 21%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(54, 54, 54, 0.25)
+    &.is-primary
+        border-color: hsl(171, 100%, 41%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(0, 209, 178, 0.25)
+    &.is-link
+        border-color: hsl(229, 53%, 53%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(72, 95, 199, 0.25)
+    &.is-info
+        border-color: hsl(207, 61%, 53%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(62, 142, 208, 0.25)
+    &.is-success
+        border-color: hsl(153, 53%, 53%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(72, 199, 142, 0.25)
+    &.is-warning
+        border-color: hsl(44, 100%, 77%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(255, 224, 138, 0.25)
+    &.is-danger
+        border-color: hsl(348, 86%, 61%)
+        &:focus,
+        &:active,
+        &.is-active
+            box-shadow: 0 0 0 0.185em rgba(241, 70, 104, 0.25)
+    &.is-small
+        border-radius: 2px
+        font-size: 0.75rem
+    &.is-medium
+        font-size: 1.25rem
+    &.is-large
+        font-size: 1.5rem
+    &.is-fullwidth
+        display: block
+        width: 100%
+    &.is-inline
+        display: inline
+        width: auto
+    &.is-rounded
+        border-radius: 9999px
+        padding-left: calc(calc(0.75em - 1px) + 0.375em)
+        padding-right: calc(calc(0.75em - 1px) + 0.375em)
+    &.is-static
+        background-color: transparent
+        border-color: transparent
+        box-shadow: none
+        padding-left: 0
+        padding-right: 0

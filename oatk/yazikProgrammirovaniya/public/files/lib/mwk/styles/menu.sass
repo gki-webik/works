@@ -1,0 +1,438 @@
+@import "variables"
+
+.wk-navbar
+    width: 100%
+    overflow: hidden
+    max-height: 69px
+    align-items: center
+    flex-wrap: wrap
+    height: 69px
+    z-index: 2147483646
+    position: relative
+    transition: max-height 0.2s ease-in-out
+    display: flex
+    &.is-line:not(.is-bottom)
+        border-bottom: 1px solid #ddd
+    &.is-line.is-bottom
+        border-top: 1px solid #ddd
+    &.is-light
+        background-color: #f8f9fa
+    &.is-light *
+        color: $color-1
+    &.is-dark
+        background-color: #2e333d
+    &.is-dark *
+        color: white !important
+    &.is-gray
+        background-color: #e5e7e8
+    &.is-gray *
+        color: $color-1
+    &.is-lightblue
+        background-color: #deeeff
+    &.is-lightblue *
+        color: $color-1
+    &.is-primary
+        background-color: $color-3
+    &.is-primary *
+        color: white !important
+    &.is-top
+        position: fixed
+        top: 0
+    &.is-bottom
+        position: fixed
+        bottom: 0
+.wk-navbar.is-mobile
+    width: 100%
+    overflow: hidden
+    max-height: 69px
+    display: block
+    transition: max-height 0.2s ease-in-out
+    &.is-light
+        background-color: #f8f9fa
+    &.is-light *
+        color: $color-1
+    &.is-dark
+        background-color: $color-1
+    &.is-dark *
+        color: $color-0
+.wk-navbar .wk-navbar-toggle
+    display: none
+    opacity: 0
+.wk-navbar.is-mobile .wk-navbar-toggle
+    padding: 0.25rem
+    font-size: 1.25rem
+    cursor: pointer
+    display: block
+    opacity: 1
+    background: none
+    line-height: 1
+    border: 1px solid rgba(0, 0, 0, .1)
+    border-radius: 0.25rem
+    transition: box-shadow .15s ease-in-out
+    &-icon
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+        display: inline-block
+        width: 1.5em
+        height: 1.5em
+        vertical-align: middle
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 100%
+    &:focus
+        box-shadow: 0 0 0 .15rem rgba(8, 104, 247, 0.1), 0 0 0 .1rem rgba(8, 104, 247, 0.26)
+
+.wk-navbar.is-mobile .wk-navbar-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #f8f9fa
+    padding: 15px
+    z-index: 3
+    border-bottom: 1px solid #ddd
+    position: relative
+
+.wk-navbar .wk-navbar-brand
+    font-size: 1.3rem
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 10px
+    img
+        height: 40px
+
+.wk-navbar.is-mobile .wk-navbar-content
+    position: relative
+
+.wk-navbar.is-mobile.is-active
+    max-height: 2000px
+    height: initial !important
+    transition: max-height 0.4s ease-in-out
+
+.wk-navbar.is-mobile .wk-navbar-nav
+    list-style-type: none
+    padding: 0
+    margin: 0
+    display: block
+    & *
+        list-style-type: none
+    & .wk-nav-item
+        padding: 10px 15px
+        &:not(.is-dropdown.is-active, .is-disabled):hover
+            background-color: #efefef
+        &:not(.is-dropdown.is-active, .is-disabled):focus,
+        &:not(.is-dropdown.is-active, .is-disabled):active
+            background-color: #e2e2e2
+        & .wk-nav-link
+            text-decoration: none
+            color: #3b3b3b
+            font-size: 1rem
+            font-weight: 300
+            line-height: 1.5
+            cursor: pointer
+            display: block
+        &.is-dropdown .wk-nav-link.is-dropdown-toggle
+            padding-bottom: 0px
+            transition: padding-bottom 0.15s ease-in-out
+        &.is-dropdown.is-active .wk-nav-link.is-dropdown-toggle
+            padding-bottom: 10px
+            transition: padding-bottom 0.15s ease-in-out
+        &.is-dropdown.is-active .wk-navbar-dropdown-menu
+            max-height: 1000px
+            border: 1px solid #ddd
+            transition: max-height 0.15s ease-in-out
+        &.is-dropdown.is-active .wk-nav-link.is-dropdown-toggle::after
+            transform: rotate(180deg)
+        &.is-disabled
+            cursor: default
+        &.is-disabled *
+            color: #a5a5a5
+            cursor: default
+    & .wk-nav-link.is-dropdown-toggle::after
+        display: inline-block
+        color: #0000008c
+        margin-left: 0.5em
+        vertical-align: middle
+        content: ""
+        border-top: 0.3em solid
+        border-right: 0.3em solid transparent
+        border-bottom: 0
+        border-left: 0.3em solid transparent
+    & .wk-navbar-dropdown-menu
+        padding: 0
+        margin: 0
+        background-color: #ffffff
+        border: none
+        border-radius: 5px
+        max-height: 0
+        transition: all 0.15s ease-in-out
+        overflow: hidden
+        cursor: pointer
+        & li:not(.wk-navbar-dropdown-line)
+            padding: 10px
+        & li:not(.wk-navbar-dropdown-line):hover
+            background-color: #f7f7f7
+        & li:not(.wk-navbar-dropdown-line):focus,
+        & li:not(.wk-navbar-dropdown-line):active
+            background-color: #f7f7f7
+    & .wk-navbar-dropdown-line hr
+        margin: 0
+        padding: 0
+        height: 1px
+        background: #ddd
+        width: 100%
+        border: none
+.wk-navbar .wk-navbar-nav
+    list-style-type: none
+    padding: 0
+    margin: 0
+    align-items: center
+    display: flex
+    & *
+        list-style-type: none
+    & .wk-nav-item
+        padding: 0px 15px
+        &:not(.is-dropdown.is-active, .is-disabled):hover
+            background-color: #efefef
+        &:not(.is-dropdown.is-active, .is-disabled):focus,
+        &:not(.is-dropdown.is-active, .is-disabled):active
+            background-color: #e2e2e2
+        & .wk-nav-link
+            text-decoration: none
+            color: #3b3b3b
+            font-size: 1rem
+            font-weight: 300
+            line-height: 1.5
+            cursor: pointer
+            display: block
+        &.is-dropdown .wk-nav-link.is-dropdown-toggle
+            padding-bottom: 0px
+            transition: padding-bottom 0.15s ease-in-out
+        &.is-dropdown.is-active .wk-navbar-dropdown-menu
+            max-height: 1000px
+            border: 1px solid #ddd
+            transition: max-height 0.15s ease-in-out
+        &.is-dropdown.is-active .wk-nav-link.is-dropdown-toggle::after
+            transform: rotate(180deg)
+        &.is-disabled
+            cursor: default
+        &.is-disabled *
+            color: #a5a5a5
+            cursor: default
+    & .wk-nav-link.is-dropdown-toggle::after
+        display: inline-block
+        color: #0000008c
+        margin-left: 0.5em
+        vertical-align: middle
+        content: ""
+        border-top: 0.3em solid
+        border-right: 0.3em solid transparent
+        border-bottom: 0
+        border-left: 0.3em solid transparent
+    & .wk-navbar-dropdown-menu
+        padding: 0
+        margin: 0
+        background-color: #ffffff
+        border: none
+        border-radius: 5px
+        max-height: 0
+        transition: all 0.15s ease-in-out
+        overflow: hidden
+        cursor: pointer
+        & li:not(.wk-navbar-dropdown-line)
+            padding: 10px
+        & li:not(.wk-navbar-dropdown-line):hover
+            background-color: #f7f7f7
+        & li:not(.wk-navbar-dropdown-line):focus,
+        & li:not(.wk-navbar-dropdown-line):active
+            background-color: #f7f7f7
+    & .wk-navbar-dropdown-line hr
+        margin: 0
+        padding: 0
+        height: 1px
+        background: #ddd
+        width: 100%
+        border: none
+
+.wk-navbar.is-mobile .wk-navbar-form
+    display: flex
+    margin: 10px
+    gap: 10px
+    & .wk-navbar-form-input
+        display: block
+        width: 100%
+        padding: 0.375rem 0.75rem
+        font-size: 1rem
+        font-weight: 400
+        line-height: 1.5
+        color: #212529
+        background-color: #fff
+        background-clip: padding-box
+        border: 1px solid #ced4da
+        appearance: none
+        border-radius: 0.25rem
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+        &:focus
+            outline: 0
+            border: 1px solid #ddd
+            box-shadow: 0 0 0 .15rem rgba(8, 104, 247, 0.1), 0 0 0 .1rem rgba(8, 104, 247, 0.26)
+
+.wk-navbar:not(.is-mobile)
+    justify-content: space-between !important
+    overflow: visible
+    div:first-child
+        padding-left: 20px
+    div:last-child
+        padding-right: 20px
+    .wk-navbar
+        &-content
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            height: 69px
+            &.is-centered
+                margin: 0 auto
+        &-dropdown-menu
+            position: absolute
+            top: 70px
+            width: 232px
+            left: 0
+        &-nav
+            .wk-nav-item
+                height: 100%
+                position: relative
+                display: flex
+                align-items: center
+                &.is-dropdown.is-active
+                    background-color: #efefef
+                &:not(.is-disabled):hover
+                    background-color: #efefef
+                &:not(.is-disabled)
+                    cursor: pointer
+        &-form
+            display: flex
+            flex-wrap: nowrap
+            align-items: center
+            gap: 5px
+            &-input
+                display: block
+                width: 100%
+                height: 40px
+                padding: 0.375rem 0.75rem
+                font-size: 1rem
+                font-weight: 400
+                line-height: 1.5
+                color: #212529
+                background-color: #fff
+                background-clip: padding-box
+                border: 1px solid #ced4da
+                appearance: none
+                border-radius: 0.25rem
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+                &:focus
+                    outline: 0
+                    border: 1px solid #ddd
+                    box-shadow: 0 0 0 .15rem rgba(8, 104, 247, 0.1), 0 0 0 .1rem rgba(8, 104, 247, 0.26)
+
+        .wk-nav-link.is-dropdown-toggle
+            display: flex
+            align-items: center
+
+.wk-navbar:not(.is-mobile).is-bottom
+    .wk-navbar-dropdown-menu
+        top: -138px !important
+
+.wk-navbar.is-dark
+    background-color: #2e333d !important
+    .wk-navbar-header
+        border-color: #717171
+    .wk-nav-item
+        &.is-dropdown.is-active
+            background-color: #383d47 !important
+        &:not(.is-disabled):hover
+            background-color: #383d47 !important
+    .wk-navbar-nav
+        .wk-navbar-dropdown-menu
+            background-color: #50555d
+            border-color: #7e7e7e !important
+        .wk-navbar-dropdown-line hr
+            background: #949494 !important
+        .wk-nav-item.is-disabled *
+            color: #b8b8b8 !important
+    &.is-mobile .wk-navbar-header
+        background-color: #2e333d !important
+    .wk-navbar-nav .wk-nav-link.is-dropdown-toggle::after
+        color: white
+    &.is-mobile
+        .wk-navbar-toggle
+            border: 1px solid rgb(255, 255, 255, 24%) !important
+            &:focus
+                box-shadow: 0 0 0 0.15rem rgba(248, 251, 255, 0.1), 0 0 0 0.1rem rgba(242, 247, 255, 0.26) !important
+            &-icon
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important
+    .wk-navbar-form-input
+        color: black !important
+        &:focus
+            box-shadow: 0 0 0 .15rem rgba(207, 225, 252, 0.1), 0 0 0 .1rem rgba(202, 223, 255, 0.26)
+
+    .wk-navbar-dropdown-menu li:not(.wk-navbar-dropdown-line):focus,
+    .wk-navbar-dropdown-menu li:not(.wk-navbar-dropdown-line):hover,
+    .wk-navbar-dropdown-menu li:not(.wk-navbar-dropdown-line):active
+        background-color: #383d47 !important
+
+.wk-navbar.is-primary
+    background-color: $color-3 !important
+    .wk-navbar-header
+        border-color: #1fa2ff
+    .wk-nav-item
+        &.is-dropdown.is-active
+            background-color: #1763f9 !important
+        &:not(.is-disabled):hover
+            background-color: #266af3 !important
+    .wk-navbar-nav
+        .wk-navbar-dropdown-menu
+            background-color: #2b91ea
+            border-color: #ebebeb !important
+        .wk-navbar-dropdown-line hr
+            background: #6783ff !important
+        .wk-nav-item.is-disabled *
+            color: #cacaca !important
+    &.is-mobile .wk-navbar-header
+        background-color: $color-3 !important
+    .wk-navbar-nav .wk-nav-link.is-dropdown-toggle::after
+        color: white
+    &.is-mobile
+        .wk-navbar-toggle
+            border: 1px solid rgb(255, 255, 255, 24%) !important
+            &:focus
+                box-shadow: 0 0 0 0.15rem rgba(248, 251, 255, 0.1), 0 0 0 0.1rem rgba(242, 247, 255, 0.26) !important
+            &-icon
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important
+    .wk-navbar-form-input
+        color: black !important
+        &:focus
+            box-shadow: 0 0 0 .15rem rgba(207, 225, 252, 0.1), 0 0 0 .1rem rgba(202, 223, 255, 0.26)
+    .wk-navbar-form
+        button.is-white:hover,
+        button.is-white:focus
+            color: black !important
+
+    .wk-navbar-dropdown-menu li:not(.wk-navbar-dropdown-line):focus,
+    .wk-navbar-dropdown-menu li:not(.wk-navbar-dropdown-line):hover,
+    .wk-navbar-dropdown-menu li:not(.wk-navbar-dropdown-line):active
+        background-color: #2f74fc !important
+
+.wk-navbar.is-gray
+    background-color: #e5e7e8 !important
+    .wk-navbar-header
+        border-color: #717171
+        background-color: #e5e7e8
+.wk-navbar.is-lightblue
+    background-color: #deeeff !important
+    .wk-navbar-header
+        border-color: #717171
+        background-color: #deeeff
+    .wk-nav-item
+        &.is-dropdown.is-active
+            background-color: #d8e6fa !important
+        &:not(.is-disabled):hover
+            background-color: #d8e6fa !important

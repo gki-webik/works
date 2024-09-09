@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import "./styles/dist/test.css";
+@import "./styles/dist/cols.css";
+@import "./styles/dist/block.css";
+@import "./styles/dist/box.css";
+@import "./styles/dist/button.css";
+@import "./styles/dist/img.css";
+@import "./styles/dist/notification.css";
+@import "./styles/dist/progress.css";
+@import "./styles/dist/table.css";
+@import "./styles/dist/tag.css";
+@import "./styles/dist/title.css";
+@import "./styles/dist/kroshki.css";
+@import "./styles/dist/card.css";
+@import "./styles/dist/dropdown.css";
+@import "./styles/dist/menu.css";
+@import "./styles/dist/message.css";
+@import "./styles/dist/modal.css";
+@import "./styles/dist/panel.css";
+@import "./styles/dist/control.css";
+@import "./styles/dist/input.css";
